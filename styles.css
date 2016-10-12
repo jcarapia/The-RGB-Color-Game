@@ -15,6 +15,13 @@ h1 {
 	background-color: steelblue;
 	margin: 0;
 	text-transform: uppercase;
+	line-height: 1.1;
+	padding: 20px 0px; 
+}
+
+#message {
+	display: inline-block;
+	width: 20%;
 }
 
 #colorDisplay {
@@ -26,8 +33,9 @@ h1 {
 	width: 30%;
 	padding-bottom: 30%;
 	float: left;
-	margin: 1.6%
-
+	margin: 1.6%;
+	border-radius: 15%;
+	display: none;
 }
 
 #stripe {
@@ -39,3 +47,25 @@ h1 {
 .selected {
 	background-color: blue;
 }
+
+button {
+	border: none;
+	background: none;
+	text-transform: uppercase;
+	height: 100%;
+	font-weight: 700;
+	color: steelblue;
+	letter-spacing: 1px;
+	font-size: inherit;
+	transition: all 0.3s;
+}
+
+button:hover {
+	color: white;
+	background: steelblue;
+}
+
+
+
+
+
