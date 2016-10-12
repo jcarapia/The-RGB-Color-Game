@@ -8,6 +8,8 @@ var winningColor = document.getElementById("colorDisplay");
 var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
 var reset = document.querySelector("#reset");
+var easy = document.querySelector("#easy");
+var hard = document.querySelector("#hard");
 
 
 
@@ -81,6 +83,19 @@ reset.addEventListener('click', function(){
 	};
 
 	h1.style.background = "#232323"
+	reset.textContent = "New Colors";
+});
+
+easy.addEventListener('click', function(){
+	hard.classList.remove("selected")
+	this.classList.add("selected")
+	alert('hello')
+});
+
+hard.addEventListener('click', function(){
+	easy.classList.remove("selected");
+	this.classList.add("selected");
+	alert('hello')
 });
 
 
