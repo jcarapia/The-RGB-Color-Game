@@ -1,5 +1,5 @@
-var colors = generateRandomColors(6);
-
+var numSquares = 6
+var colors = generateRandomColors(numSquares);
 
 var squares = document.getElementsByClassName("square"); //or querySelectorAll
 var pickedColor = pickColor();
@@ -28,7 +28,7 @@ for(var i = 0; i < squares.length; i++){
 		} else {
 			console.log("try again")
 			messageDisplay.textContent = "Try Again"
-			this.style.background = "#232323";
+			this.style.background = "#steelblue";
 		}
 	})
 };
@@ -53,7 +53,7 @@ function pickColor(){
 // Generate an array of random colors 
 function generateRandomColors(num){
 	var results = [];
-	for(var i = 0; i <= num; i++){
+	for(var i = 0; i < num; i++){
 		results.push(randomColor());
 	};
 	return results;
@@ -74,7 +74,7 @@ function randomColor(){
 
 reset.addEventListener('click', function(){
 	console.log('hello')
-	colors = generateRandomColors(6);
+	colors = generateRandomColors(numSquares);
 	pickedColor = pickColor();
 	colorDisplay.textContent = pickedColor;
 	
@@ -82,20 +82,40 @@ reset.addEventListener('click', function(){
 		squares[i].style.background = colors[i];
 	};
 
-	h1.style.background = "#232323"
+	h1.style.background = "steelblue"
 	reset.textContent = "New Colors";
 });
 
 easy.addEventListener('click', function(){
-	hard.classList.remove("selected")
-	this.classList.add("selected")
-	alert('hello')
+	numSquares = 3;
+	hard.classList.remove("selected");
+	this.classList.add("selected");
+	colors = generateRandomColors(numSquares);
+	pickedColor = pickColor();
+	colorDisplay.textContent = pickedColor;
+	for(var i = 0; i < squares.length; i++){
+		if(colors[i]){
+			squares[i].style.background = colors[i];
+		} else {
+			squares[i].style.display = "none"
+		}
+	}
 });
 
 hard.addEventListener('click', function(){
+	numSquares = 6;
 	easy.classList.remove("selected");
 	this.classList.add("selected");
-	alert('hello')
+	colors = generateRandomColors(numSquares);
+	pickedColor = pickColor();
+	colorDisplay.textContent = pickedColor;
+	for(var i = 0; i < squares.length; i++){
+
+			squares[i].style.background = colors[i];
+
+			squares[i].style.display = "block"
+
+	}
 });
 
 

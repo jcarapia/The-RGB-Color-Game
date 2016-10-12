@@ -1,6 +1,8 @@
 body {
 	background: #232323;
 	text-align: center;
+	margin: 0;
+	font-family: "Montserrat", "Avenir";
 }
 
 .container {
@@ -8,7 +10,15 @@ body {
 }
 
 h1 {
+	font-weight: normal;
 	color: white;
+	background-color: steelblue;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+#colorDisplay {
+	font-size: 200%;
 }
 
 .square {
@@ -17,6 +27,7 @@ h1 {
 	padding-bottom: 30%;
 	float: left;
 	margin: 1.6%
+
 }
 
 #stripe {
